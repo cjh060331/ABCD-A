@@ -1,0 +1,38 @@
+﻿  0410.cpp
+C:\Users\user\Desktop\202515032 조정환\Project3\Project3\0410.cpp(8,12): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'size_t'입니다.
+      C:\Users\user\Desktop\202515032 조정환\Project3\Project3\0410.cpp(8,12):
+      서식 문자열에서 '%zd'을(를) 사용하는 것이 좋습니다.
+  
+C:\Users\user\Desktop\202515032 조정환\Project3\Project3\0410.cpp(9,12): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'size_t'입니다.
+      C:\Users\user\Desktop\202515032 조정환\Project3\Project3\0410.cpp(9,12):
+      서식 문자열에서 '%zd'을(를) 사용하는 것이 좋습니다.
+  
+C:\Users\user\Desktop\202515032 조정환\Project3\Project3\0410.cpp(10,12): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'size_t'입니다.
+      C:\Users\user\Desktop\202515032 조정환\Project3\Project3\0410.cpp(10,12):
+      서식 문자열에서 '%zd'을(를) 사용하는 것이 좋습니다.
+  
+C:\Users\user\Desktop\202515032 조정환\Project3\Project3\0410.cpp(12,12): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'size_t'입니다.
+      C:\Users\user\Desktop\202515032 조정환\Project3\Project3\0410.cpp(12,12):
+      서식 문자열에서 '%zd'을(를) 사용하는 것이 좋습니다.
+  
+C:\Users\user\Desktop\202515032 조정환\Project3\Project3\0410.cpp(13,12): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'size_t'입니다.
+      C:\Users\user\Desktop\202515032 조정환\Project3\Project3\0410.cpp(13,12):
+      서식 문자열에서 '%zd'을(를) 사용하는 것이 좋습니다.
+  
+C:\Users\user\Desktop\202515032 조정환\Project3\Project3\0410.cpp(14,12): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'size_t'입니다.
+      C:\Users\user\Desktop\202515032 조정환\Project3\Project3\0410.cpp(14,12):
+      서식 문자열에서 '%zd'을(를) 사용하는 것이 좋습니다.
+  
+C:\Users\user\Desktop\202515032 조정환\Project3\Project3\0410.cpp(15,12): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'size_t'입니다.
+      C:\Users\user\Desktop\202515032 조정환\Project3\Project3\0410.cpp(15,12):
+      서식 문자열에서 '%zd'을(를) 사용하는 것이 좋습니다.
+  
+C:\Users\user\Desktop\202515032 조정환\Project3\Project3\0410.cpp(16,12): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'size_t'입니다.
+      C:\Users\user\Desktop\202515032 조정환\Project3\Project3\0410.cpp(16,12):
+      서식 문자열에서 '%zd'을(를) 사용하는 것이 좋습니다.
+  
+C:\Users\user\Desktop\202515032 조정환\Project3\Project3\0410.cpp(17,12): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'size_t'입니다.
+      C:\Users\user\Desktop\202515032 조정환\Project3\Project3\0410.cpp(17,12):
+      서식 문자열에서 '%zd'을(를) 사용하는 것이 좋습니다.
+  
+  Project3.vcxproj -> C:\Users\user\Desktop\202515032 조정환\Project3\x64\Debug\Project3.exe

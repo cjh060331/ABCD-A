@@ -1,0 +1,80 @@
+# YOLOv8 설치
+!pip install ultralytics
+#압축 해제
+import zipfile
+
+with zipfile.ZipFile('line_sensing.v2i.yolov8.zip', 'r') as zip_ref:
+    zip_ref.extractall('dataset')
+#학습
+from ultralytics import YOLO
+model = YOLO('yolov8n-seg.pt')  # 또는 yolov8s-seg.pt 등
+model.train(
+    data='dataset/data.yaml', #yaml 수정
+    epochs=1000, #횟수
+    imgsz=640,
+    task='segment',
+    workers=0,
+    patience=0
+)
+from ultralytics import YOLO  # ✅ 이 줄이 반드시 필요해!
+
+# 학습된 YOLOv8 세그멘테이션 모델 불러오기
+model = YOLO('runs/segment/train/weights/best.pt')
+
+# 원본 이미지 폴더에 대해 추론 실행
+results = model('dataset/train/images', save=True, task='segment')
+import cv2
+import os
+from glob import glob
+
+img_folder = 'runs\segment\predict'
+output_video = 'segmentation_result2.mp4'
+
+# 이미지 목록
+img_files = sorted(glob(os.path.join(img_folder, '*.jpg')) + glob(os.path.join(img_folder, '*.png')))
+if not img_files:
+    print("❌ 결과 이미지가 없습니다.")
+    exit()
+
+# 비디오 설정
+frame = cv2.imread(img_files[0])
+height, width, _ = frame.shape
+video = cv2.VideoWriter(output_video, cv2.VideoWriter_fourcc(*'mp4v'), 5, (width, height))
+
+for img in img_files:
+    video.write(cv2.imread(img))
+
+video.release()
+print(f"✅ 비디오 저장 완료: {output_video}")
+from ultralytics import YOLO
+import cv2
+
+# 모델 경로 (절대 경로)
+model_path = 'C:/Users/choes/Desktop/line_sensing/runs/segment/train/weights/best.pt'
+model = YOLO(model_path, task='segment')
+
+# 비디오 경로 (같은 폴더에 있다면 아래처럼 절대 경로로)
+video_path = 'C:/Users/choes/Desktop/line_sensing/segmentation_result2.mp4'
+cap = cv2.VideoCapture(video_path)
+
+# 비디오 저장 설정
+fourcc = cv2.VideoWriter_fourcc(*'mp4v')
+out = cv2.VideoWriter('output_video.mp4', fourcc, 30.0, (int(cap.get(3)), int(cap.get(4))))
+
+while cap.isOpened():
+    ret, frame = cap.read()
+    if not ret:
+        break
+
+    results = model(frame)
+    annotated_frame = results[0].plot()
+
+    cv2.imshow('Segmented Frame', annotated_frame)  # Colab 아님 → cv2.imshow 사용
+    out.write(annotated_frame)
+
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+cap.release()
+out.release()
+cv2.destroyAllWindows()
